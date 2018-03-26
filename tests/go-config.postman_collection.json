@@ -1,0 +1,261 @@
+{
+	"info": {
+		"_postman_id": "7a8b2231-fd77-422e-9b4c-27f4c3db5cf1",
+		"name": "go-config",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5000/one",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9a410a0a-3679-4bbb-ad27-ce7a79ce5354",
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Item is not found\"] = responseCode.code === 404;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:5000/doesnotexists",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"doesnotexists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/one",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e2925bcb-1f2c-4820-8c3f-3fc952edb8c8",
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Item is created with status code 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": \"one\",\n  \"name\": \"first configuration\",\n  \"value\": \"1\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/one",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"one"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/one",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2759348f-e301-401b-94f8-68dda070e2a6",
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Item is retrieved with status code 200\"] = responseCode.code === 200;",
+							"",
+							"var data = JSON.parse(responseBody);",
+							"",
+							"tests[\"Id matches\"] = data.id === \"one\";",
+							"tests[\"Name matches\"] = data.name === \"first configuration\";",
+							"tests[\"Value matches\"] = data.value === \"1\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:5000/one",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"one"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/one",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c44f0516-3a03-4879-bfa5-290a893ba380",
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Item is modified with status code 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": \"one\",\n  \"name\": \"first configuration updated\",\n  \"value\": \"2\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/one",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"one"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/one",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e69a6887-cb09-4200-a599-aa5ae7ec4882",
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Modified item is retrieved with status code 200\"] = responseCode.code === 200;",
+							"",
+							"var data = JSON.parse(responseBody);",
+							"",
+							"tests[\"Id matches\"] = data.id === \"one\";",
+							"tests[\"Name matches\"] = data.name === \"first configuration updated\";",
+							"tests[\"Value matches\"] = data.value === \"2\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:5000/one",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"one"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/one",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "af0809f4-f99c-45d3-941f-0a48d0db5074",
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Item is deleted with status code 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:5000/one",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"one"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/one",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a86291f7-4fbb-463c-b27b-f515493639f6",
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Delete item is not found with status code 404\"] = responseCode.code === 404;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:5000/one",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"one"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

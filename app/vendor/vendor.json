@@ -1,0 +1,61 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "QHvTjgVb0LH7ghzr35pZ5Lpks/A=",
+			"path": "github.com/gorilla/mux",
+			"revision": "c0091a029979286890368b4c7b301261e448e242",
+			"revisionTime": "2018-01-20T07:58:19Z"
+		},
+		{
+			"checksumSHA1": "lzxr2rdWylya6Z5Ft4oA0Fvr4TU=",
+			"path": "gopkg.in/bsm/ratelimit.v1",
+			"revision": "db14e161995a5177acef654cb0dd785e8ee8bc22",
+			"revisionTime": "2016-02-20T15:49:07Z"
+		},
+		{
+			"checksumSHA1": "+YQ0zT2XLQG1u+futgF/wHcWhgc=",
+			"path": "gopkg.in/redis.v4",
+			"revision": "c938162545c57136fa59879746bc65d0f1db3d1e",
+			"revisionTime": "2016-12-20T10:13:33Z"
+		},
+		{
+			"checksumSHA1": "s2pkdHnt4AEJNiFEFydejS5aELQ=",
+			"path": "gopkg.in/redis.v4/internal",
+			"revision": "c938162545c57136fa59879746bc65d0f1db3d1e",
+			"revisionTime": "2016-12-20T10:13:33Z"
+		},
+		{
+			"checksumSHA1": "8FgHLpADEycTPwRFcXa2psiEu6s=",
+			"path": "gopkg.in/redis.v4/internal/consistenthash",
+			"revision": "c938162545c57136fa59879746bc65d0f1db3d1e",
+			"revisionTime": "2016-12-20T10:13:33Z"
+		},
+		{
+			"checksumSHA1": "zHqddrd3T9R+uzrAv2ZPdXQsT3o=",
+			"path": "gopkg.in/redis.v4/internal/errors",
+			"revision": "c938162545c57136fa59879746bc65d0f1db3d1e",
+			"revisionTime": "2016-12-20T10:13:33Z"
+		},
+		{
+			"checksumSHA1": "1OmUhja5tJIJ/PugPAkW0mXPjtA=",
+			"path": "gopkg.in/redis.v4/internal/hashtag",
+			"revision": "c938162545c57136fa59879746bc65d0f1db3d1e",
+			"revisionTime": "2016-12-20T10:13:33Z"
+		},
+		{
+			"checksumSHA1": "H9St6jru1zWhvlEi14gyy/NGHl8=",
+			"path": "gopkg.in/redis.v4/internal/pool",
+			"revision": "c938162545c57136fa59879746bc65d0f1db3d1e",
+			"revisionTime": "2016-12-20T10:13:33Z"
+		},
+		{
+			"checksumSHA1": "mTCUtw78SmGR12qjcDQa3431mqM=",
+			"path": "gopkg.in/redis.v4/internal/proto",
+			"revision": "c938162545c57136fa59879746bc65d0f1db3d1e",
+			"revisionTime": "2016-12-20T10:13:33Z"
+		}
+	],
+	"rootPath": "go-config/app"
+}
