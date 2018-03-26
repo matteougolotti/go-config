@@ -9,7 +9,6 @@ A key-value configuration management service written in Go
 - Docker - to run the service
 - NodeJS - to test the service
 
----
 
 ### Run with
 ```
@@ -27,7 +26,7 @@ npm install -g newman
 cd tests
 newman run go-config.postman_collection.json
 ```
----
+
 ### Features
 
 CRUD service for configurations in the format
@@ -45,9 +44,7 @@ CRUD service for configurations in the format
 - DELETE /someid - delete configuration
 - GET / - retrieve all configurations
 
----
+### Known limitations
 
-Known limitations
----
 
 - The service is currently using a single connection to Redis DB. Connections pooling may be beneficial for performances / concurrency.
