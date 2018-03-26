@@ -3,31 +3,32 @@ go-config
 
 A key-value configuration management service written in Go
 
-Requirements
+
+### Requirements
 
 - Docker - to run the service
 - NodeJS - to test the service
 
+---
 
-Run with
+### Run with
 ```
 cd app
 docker-compose up
 ```
 
-Tests setup
+### Tests setup
 ```
 npm install -g newman
 ```
 
-Run the tests
+### Run the tests
 ```
 cd tests
 newman run go-config.postman_collection.json
 ```
-
-Features
 ---
+### Features
 
 CRUD service for configurations in the format
 ```
@@ -43,6 +44,8 @@ CRUD service for configurations in the format
 - PUT /someid {config} - override configuration with id "someid"
 - DELETE /someid - delete configuration
 - GET / - retrieve all configurations
+
+---
 
 Known limitations
 ---
