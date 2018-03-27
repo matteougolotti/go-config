@@ -27,6 +27,8 @@ cd tests
 newman run go-config.postman_collection.json
 ```
 
+Or import and run the tests collection with <a href="https://www.getpostman.com/">Postman</a>
+
 ### Features
 
 CRUD service for configurations in the format
