@@ -35,7 +35,7 @@ func main() {
 		fmt.Println("Db connection KO", os.Getenv("REDIS_URL"))
 		return
 	}
-	fmt.Println("Db connection KO", os.Getenv("REDIS_URL"))
+	fmt.Println("Db connection OK", os.Getenv("REDIS_URL"))
 
 	router := mux.NewRouter()
 	router.HandleFunc("/{id}", db.getHandler).Methods("GET")
